@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="calendar.png" type="image/x-icon">
+  <title>Display Date</title>
+  <style>
+    body {
+      width: 100%;
+      height: auto;
+      background-color: bisque;
+    }
+    .container{
+      margin: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(124, 206, 206);
+    }
+    h3{
+      margin: 35px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="currentdate">
+      <h1>Today's Date</h1>
+      <h3 id="date"></h3></div>
+  </div>
+  </div>
+<script>
+  function displayDate(){
+  let date = new Date()
+  date = date.toString().split(" ")
+  date = date[1] + " " + date[2] + " " + date[3] 
+  document.querySelector("#date").innerHTML = date 
+}
+window.onload = function() {
+  displayDate()
+};
+</script>
+</body>
+</html>
